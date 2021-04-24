@@ -1,5 +1,6 @@
 ﻿using Common.AutomapperProfiles;
 using Common.Models;
+using Common.SellingService;
 using Common.StorageRepository;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -9,11 +10,17 @@ namespace Common
     {
         public static void AddCommonInjection(this IServiceCollection serviceCollection)
         {
-            serviceCollection.AddScoped<IBaseStorageRepository<InventoryListDto>, FileStorageBaseRepository<InventoryListDto>>(sp
+            serviceCollection.AddSingleton<IBaseStorageRepository<InventoryListDto>, FileStorageBaseRepository<InventoryListDto>>(sp
                 => new FileStorageBaseRepository<InventoryListDto>(FileNameConstants.Inventory));
 
-            serviceCollection.AddScoped<IBaseStorageRepository<InventoryListDto>, FileStorageBaseRepository<InventoryListDto>>(sp
-                => new FileStorageBaseRepository<InventoryListDto>(FileNameConstants.Products));
+            serviceCollection.AddSingleton<IBaseStorageRepository<ProductListDto>, FileStorageBaseRepository<ProductListDto>>(sp
+                => new FileStorageBaseRepository<ProductListDto>(FileNameConstants.Products));
+
+            serviceCollection.AddSingleton<IStorageRepository<Article>, ArticleRepository>();
+            serviceCollection.AddSingleton<IStorageRepository<Product>, ProductRepository>();
+            serviceCollection.AddSingleton<IProductSellingService, ProductSellingService>();
+            serviceCollection.AddSingleton<IStockService, StockService>();
+
             serviceCollection.AddAutoMapper(typeof(ArticleInventoryProfile));
         }
 
