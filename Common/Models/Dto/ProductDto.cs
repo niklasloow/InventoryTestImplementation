@@ -5,10 +5,11 @@ namespace Common.Models
 {
     public class ContainArticleDto
     {
+        [JsonPropertyName("art_id")]
         public string ArtId { get; set; }
 
         [JsonPropertyName("amount_of")]
-        public int AmountOf { get; set; }
+        public string AmountOf { get; set; }
     }
 
     public class ProductDto
