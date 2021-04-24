@@ -1,4 +1,5 @@
-﻿using Common.Models;
+﻿using System.Data;
+using Common.Models;
 using Common.StorageRepository;
 
 namespace Common.SellingService
@@ -18,6 +19,10 @@ namespace Common.SellingService
         public void DecreaseArticleStockForProduct(string productId)
         {
             var product = _productRepository.GetById(productId);
+            
+            if (product == null)
+                throw new DataException($"Could not find requested product of Id :{productId}");
+
             foreach (var article in product.ContainArticles)
             {
                 DecreaseStock(article.ArtId, article.AmountOf);

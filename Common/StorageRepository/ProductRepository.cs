@@ -20,7 +20,7 @@ namespace Common.StorageRepository
         public Product GetById(string id)
         {
             var products = _repository.Read();
-            var product = products.Products.FirstOrDefault(x => x.Id.Equals(id));
+            var product = products.Products.FirstOrDefault(x => x.Id == id);
             return _mapper.Map<Product>(product);
         }
 
@@ -32,7 +32,7 @@ namespace Common.StorageRepository
         public IEnumerable<Product> GetAll()
         {
             var products = _repository.Read();
-            return _mapper.Map<IEnumerable<Product>>(products);
+            return _mapper.Map<IEnumerable<Product>>(products.Products);
         }
     }
 }

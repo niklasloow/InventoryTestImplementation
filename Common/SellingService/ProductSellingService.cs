@@ -18,7 +18,9 @@ namespace Common.SellingService
         
         public bool CanSellProduct(string productId)
         {
-            throw new NotImplementedException();
+            //For the program to run
+            return true;
+            //throw new NotImplementedException();
         }
 
         public void SellProduct(string productId)
