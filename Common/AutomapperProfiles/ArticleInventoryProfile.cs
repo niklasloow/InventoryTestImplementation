@@ -7,13 +7,8 @@ namespace Common.AutomapperProfiles
     {
         public ArticleInventoryProfile()
         {
-            CreateMap<Article, InventoryDto>()
-                .ForMember(dest => dest.ArtId, source =>
-                    source.MapFrom(src => src.ArtId))
-                .ForMember(dest => dest.Stock, source =>
-                    source.MapFrom(src => src.Stock))
-                .ForMember(dest => dest.Name, source =>
-                    source.MapFrom(src => src.Name));
+            CreateMap<Article, InventoryDto>();
+            CreateMap<InventoryDto, Article>();
 
         }
     }
