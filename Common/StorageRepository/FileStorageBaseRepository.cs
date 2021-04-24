@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text.Json;
+using System.Threading;
 
 namespace Common.StorageRepository
 {
@@ -10,11 +11,9 @@ namespace Common.StorageRepository
 
         public FileStorageBaseRepository(string fileName)
         {
-            var filePath = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory);
-            if (string.IsNullOrWhiteSpace(filePath))
+            if (string.IsNullOrWhiteSpace(fileName))
                 throw new ArgumentNullException();
-
-            _path = Path.Combine(filePath, $@"Data\{fileName}.json");
+            _path = $@"C:\Repositories\Personal Projects\InventoryTestImplementation\Common\Data\{fileName}.json";
         }
 
         public void Create(T model)
