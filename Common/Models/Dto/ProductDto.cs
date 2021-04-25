@@ -19,9 +19,12 @@ namespace Common.Models
 
         [JsonPropertyName("contain_articles")]
         public List<ContainArticleDto> ContainArticles { get; set; }
-        
+
         [JsonPropertyName("id")]
         public string Id { get; set; }
+        
+        [JsonPropertyName("price")]
+        public string Price { get; set; }
     }
     public class ProductListDto
     {
