@@ -19,6 +19,7 @@ namespace Host.AzureFunction.Endpoints.Products
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req)
         {
+            //TODO - should be contained in a service
             var productId = req.Query["productId"];
             if (!_productSellingService.CanSellProduct(productId))
                 return new NotFoundObjectResult("Can't be sold");
