@@ -1,3 +1,4 @@
+using System;
 using System.Threading.Tasks;
 using Common.SellingService;
 using Microsoft.AspNetCore.Http;
@@ -19,14 +20,7 @@ namespace Host.AzureFunction.Endpoints.Products
         public async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = null)] HttpRequest req)
         {
-            var productId = req.Query["productId"];
-            if (!_productSellingService.CanSellProduct(productId))
-                return new NotFoundObjectResult("Can't be sold");
-            
-            _productSellingService.SellProduct(productId);
-
-            const string responseMessage = "Product sold";
-            return new OkObjectResult(responseMessage);
+            throw new NotImplementedException();
         }
     }
 }
