@@ -36,7 +36,7 @@ namespace Common.SellingService
         private void UpdateArticleStock(string artId, int amount)
         {
             var part = _articleRepository.GetById(artId);
-            part.Stock -= amount;
+            part.Stock += amount;
             _articleRepository.Update(part);
         }
     }
