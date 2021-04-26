@@ -24,7 +24,7 @@ namespace Common.Models
         public string Id { get; set; }
         
         [JsonPropertyName("price")]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
     }
     public class ProductListDto
     {
