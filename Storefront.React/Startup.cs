@@ -24,7 +24,7 @@ namespace Storefront.React
         {
 
             services.AddControllersWithViews();
-            services.AddCommonInjection();
+            services.AddCommonInjection(Configuration);
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {

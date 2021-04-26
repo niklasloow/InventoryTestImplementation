@@ -1,20 +1,23 @@
-﻿using Common.AutomapperProfiles;
+﻿using System;
+using Common.AutomapperProfiles;
 using Common.Models;
 using Common.SellingService;
 using Common.StorageRepository;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Common
 {
     public static class DependencyInjectionCommon
     {
-        public static void AddCommonInjection(this IServiceCollection serviceCollection)
+        public static void AddCommonInjection(this IServiceCollection serviceCollection, IConfiguration config)
         {
+            var basePath = config.GetValue<string>(ConfigurationsConstants.BasePathConfigName);
             serviceCollection.AddSingleton<IBaseStorageRepository<InventoryListDto>, FileStorageBaseRepository<InventoryListDto>>(sp
-                => new FileStorageBaseRepository<InventoryListDto>(FileNameConstants.Inventory));
+                => new FileStorageBaseRepository<InventoryListDto>(basePath, ConfigurationsConstants.FileNames.Inventory));
 
             serviceCollection.AddSingleton<IBaseStorageRepository<ProductListDto>, FileStorageBaseRepository<ProductListDto>>(sp
-                => new FileStorageBaseRepository<ProductListDto>(FileNameConstants.Products));
+                => new FileStorageBaseRepository<ProductListDto>(basePath, ConfigurationsConstants.FileNames.Products));
 
             serviceCollection.AddSingleton<IStorageRepository<Article>, ArticleRepository>();
             serviceCollection.AddSingleton<IStorageRepository<Product>, ProductRepository>();
@@ -26,9 +29,13 @@ namespace Common
 
     }
 
-    public static class FileNameConstants
+    public static class ConfigurationsConstants
     {
-        public static string Inventory => "inventory";
-        public static string Products => "products";
+        public static string BasePathConfigName => "FileBasePath";
+        public static class FileNames
+        {
+            public static string Inventory => "inventory";
+            public static string Products => "products";
+        }
     }
 }

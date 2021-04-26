@@ -18,7 +18,7 @@ namespace Host.AzureFunction
 #endif
                 .AddEnvironmentVariables()
                 .Build();
-            builder.Services.AddCommonInjection();
+            builder.Services.AddCommonInjection(config);
 
         }
     }
