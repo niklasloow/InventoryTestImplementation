@@ -9,11 +9,11 @@ namespace Common.StorageRepository
     {
         private readonly string _path;
 
-        public FileStorageBaseRepository(string fileName)
+        public FileStorageBaseRepository(string basePath,string fileName)
         {
             if (string.IsNullOrWhiteSpace(fileName))
                 throw new ArgumentNullException();
-            _path = $@"C:\Repositories\Personal Projects\InventoryTestImplementation\Common\Data\{fileName}.json";
+            _path = Path.Combine(basePath, fileName + ".json");
         }
 
         public void Create(T model)
@@ -29,7 +29,8 @@ namespace Common.StorageRepository
 
         public void Update(T model)
         {
-            throw new NotImplementedException();
+            var fileContent = JsonSerializer.Serialize(model);
+            File.WriteAllText(_path, fileContent);
         }
 
         public void Delete(string id)
