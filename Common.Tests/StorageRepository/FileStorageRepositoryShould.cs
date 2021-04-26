@@ -10,7 +10,7 @@ namespace Common.Tests.StorageRepository
         [Fact]
         public void Debug()
         {
-            var fileStorage = new FileStorageBaseRepository<InventoryListDto>("inventory");
+            //var fileStorage = new FileStorageBaseRepository<InventoryListDto>("inventory");
         }
         //public void Create(T model)
         //{
