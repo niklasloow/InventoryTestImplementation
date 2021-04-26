@@ -28,5 +28,11 @@ namespace Storefront.React.Controllers
         {
             return _productSellingService.GetAllSellableProduct();
         }
+        
+        [HttpGet("SellProduct")]
+        public void SellProduct(string productId)
+        {
+            _productSellingService.SellProduct(productId);
+        }
     }
 }
