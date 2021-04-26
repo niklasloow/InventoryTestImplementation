@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Common.Models;
 
-namespace Common.SellingService
+namespace Common.SellingService.Interfaces
 {
     public interface IProductSellingService
     {

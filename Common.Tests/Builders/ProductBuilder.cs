@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Common.Models;
 
-namespace Common.SellingService
+namespace Common.Tests.Builders
 {
     public class ProductBuilder
     {

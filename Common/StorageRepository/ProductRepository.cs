@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using AutoMapper;
 using Common.Models;
+using Common.Models.Dto;
+using Common.StorageRepository.Interfaces;
 
 namespace Common.StorageRepository
 {

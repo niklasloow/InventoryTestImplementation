@@ -1,11 +1,13 @@
 ﻿using System;
 using Better.RandomDataGenerator;
 using Common.Models;
-using Common.StorageRepository;
+using Common.SellingService;
+using Common.StorageRepository.Interfaces;
+using Common.Tests.Builders;
 using FakeItEasy;
 using Xunit;
 
-namespace Common.SellingService
+namespace Common.Tests.SellingService
 {
     public class StockServiceShould
     {

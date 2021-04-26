@@ -1,7 +1,7 @@
 ﻿using Better.RandomDataGenerator;
 using Common.Models;
 
-namespace Common.SellingService
+namespace Common.Tests.Builders
 {
     public class ArticleBuilder
     {

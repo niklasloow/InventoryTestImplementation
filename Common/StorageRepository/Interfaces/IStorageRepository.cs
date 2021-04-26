@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using Common.Models;
 
-namespace Common.StorageRepository
+namespace Common.StorageRepository.Interfaces
 {
     public interface IStorageRepository<TEntity>
     {

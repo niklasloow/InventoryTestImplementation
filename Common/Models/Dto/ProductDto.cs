@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text.Json.Serialization;
 
-namespace Common.Models
+namespace Common.Models.Dto
 {
     public class ContainArticleDto
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Common.Models;
+using Common.Models.Dto;
 
-namespace Common.Tests.StorageRepository
+namespace Common.Tests.Builders
 {
     public class InventoryDtoBuilder
     {

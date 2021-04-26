@@ -1,6 +1,8 @@
 ﻿using System.Data;
 using Common.Models;
+using Common.SellingService.Interfaces;
 using Common.StorageRepository;
+using Common.StorageRepository.Interfaces;
 
 namespace Common.SellingService
 {

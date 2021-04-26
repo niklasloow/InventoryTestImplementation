@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Common.Models;
 using Common.SellingService;
+using Common.SellingService.Interfaces;
 
 namespace Storefront.React.Controllers
 {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using Common.Models;
-using Common.StorageRepository;
-
-namespace Common.SellingService
+﻿namespace Common.Tests.SellingService
 {
     public class ProductSellingServiceShould
     {

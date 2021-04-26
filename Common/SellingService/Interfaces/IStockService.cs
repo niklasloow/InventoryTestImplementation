@@ -1,6 +1,4 @@
-﻿using Common.Models;
-
-namespace Common.SellingService
+﻿namespace Common.SellingService.Interfaces
 {
     public interface IStockService
     {

@@ -1,8 +1,11 @@
 ﻿using System;
 using Common.AutomapperProfiles;
 using Common.Models;
+using Common.Models.Dto;
 using Common.SellingService;
+using Common.SellingService.Interfaces;
 using Common.StorageRepository;
+using Common.StorageRepository.Interfaces;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 

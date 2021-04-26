@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Common.Models;
+using Common.Models.Dto;
 
 namespace Common.AutomapperProfiles
 {

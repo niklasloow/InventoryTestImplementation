@@ -1,4 +1,4 @@
-﻿namespace Common.StorageRepository
+﻿namespace Common.StorageRepository.Interfaces
 {
     public interface IBaseStorageRepository<T>
     {
