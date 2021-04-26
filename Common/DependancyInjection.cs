@@ -27,6 +27,7 @@ namespace Common
             serviceCollection.AddSingleton<IStockService, StockService>();
 
             serviceCollection.AddAutoMapper(typeof(ArticleInventoryProfile));
+            serviceCollection.AddAutoMapper(typeof(ProductProductDtoProfile));
         }
 
     }
