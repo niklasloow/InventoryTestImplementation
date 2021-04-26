@@ -13,3 +13,6 @@ To get the api running you need to set the basepath in local.development.json
 - Authorization level is currently set to allow all, should be raised to API key at least 
 - Move away from the current data store of file on a disk and at least move to a blob. My recommendation would currently be Azure table due to the low complexity of the data. 
 - Still a lot of potential null-exceptions these should be handle, maybe/options pattern would be a great first step
+
+##Missing features
+- Still missing ability to update any products other than selling. 
