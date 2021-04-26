@@ -20,6 +20,7 @@
     {
       "name": "Dinning Table",
       "id": "1111", 
+      "price" : 2300, 
       "contain_articles": [
         {
           "art_id": "1",
