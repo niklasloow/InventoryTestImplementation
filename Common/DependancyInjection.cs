@@ -1,5 +1,4 @@
-﻿using System;
-using Common.AutomapperProfiles;
+﻿using Common.AutomapperProfiles;
 using Common.Models;
 using Common.Models.Dto;
 using Common.SellingService;

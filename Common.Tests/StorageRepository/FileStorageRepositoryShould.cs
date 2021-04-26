@@ -1,7 +1,4 @@
-﻿using System;
-using Common.Models;
-using Common.StorageRepository;
-using Xunit;
+﻿using Xunit;
 
 namespace Common.Tests.StorageRepository
 {

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.IO;
 using System.Text.Json;
-using System.Threading;
 using Common.StorageRepository.Interfaces;
 
 namespace Common.StorageRepository

@@ -1,11 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Common.Models;
-using Common.SellingService;
 using Common.SellingService.Interfaces;
 
 namespace Storefront.React.Controllers

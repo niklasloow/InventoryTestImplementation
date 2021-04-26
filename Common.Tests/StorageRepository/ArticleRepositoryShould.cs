@@ -1,8 +1,6 @@
 ﻿using AutoMapper;
 using Better.RandomDataGenerator;
-using Common.Models;
 using Common.Models.Dto;
-using Common.StorageRepository;
 using Common.StorageRepository.Interfaces;
 using Common.Tests.Builders;
 using FakeItEasy;
