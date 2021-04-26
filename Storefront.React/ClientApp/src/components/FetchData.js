@@ -24,6 +24,7 @@ export class FetchData extends Component {
                         <th>Id</th>
                         <th>Name</th>
                         <th>Price</th>
+                        <th>Stock</th>
                         <th>Sell</th>
                     </tr>
                 </thead>
@@ -33,6 +34,7 @@ export class FetchData extends Component {
                             <td>{product.id ?? 'Id is missing'}</td>
                             <td>{product.name}</td>
                             <td>{product.price ?? 'Price is missing'}</td>
+                            <td>{product.stock ?? 'Stock is missing'}</td>
                             <td>
                                 <button className="btn btn-primary" onClick={() => FetchData.sellProduct(product.id)}>Sell one</button>
                             </td>
